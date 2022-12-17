@@ -1,0 +1,203 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 9999;
+    border-bottom: .5px solid #eee;
+}
+.menuBtn {
+    display: none;
+}
+.nav img {
+    width: 40px;
+}
+.nav a {
+ text-decoration: none;
+ font-family: 'Sono', sans-serif;
+}
+.nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 10px;
+    margin-right: 6em;
+    gap: 2em;
+}
+.nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+  }
+  
+  .nav ul li a:hover::after {
+    width: 100%;
+  }
+.get_started {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.get_started button {
+    padding: 10px;
+    background-color: rgb(62, 241, 167);
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+}
+.get_started button a {
+    color: #000;
+    font-size: 15px;
+}
+.menuBar {
+    position: absolute;
+    width: 100%;
+    height: 0vh;
+    background-color: rgba(0, 0, 0, 0.178);
+    backdrop-filter: blur(10px);
+    top: 9px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 1s all;
+    z-index: 99999;
+}
+.menuBar h2 {
+    display: block;
+    font-size: 10vw;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.cancel {
+    position: absolute;
+    top: 20px;
+    font-size: 40px;
+
+}
+.menuBar button a{
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+   border-radius: 10px;
+    font-size: 5vw;
+}
+.profile {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.profile-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+.profile-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.searchBar {
+    width: 25%;
+    background: #eee;
+    padding: 5px;
+    border-radius: 10px;
+}
+.searchBar input {
+    border: none;
+    outline: none;
+    width: 77%;
+    padding: 2px;
+    background: transparent;
+}
+.searchBar button {
+    width: 20%;
+    background-color: rgb(62, 241, 167);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+.prof-wr {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+.prof-wr button {
+    padding: 1em;
+    width: 100px;
+    border: none;
+    border-radius: .3em;
+    background-color: rgb(62, 241, 167);
+    color: #fff;
+    cursor: pointer;
+}
+.drop-down {
+    background-color: #fff;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.329);
+    position: absolute;
+    top: 80%;
+    right: 8%;
+    opacity: 0;
+    transition: 300ms opacity;
+}
+.drop-down ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+.drop-down ul li{
+    padding: 5px;
+    width: 100%;
+    margin: 0;
+}
+.drop-down ul li:hover {
+    background-color: #eee;
+}
+.profile:hover > .drop-down {
+    opacity: 1;
+}
+@media screen and (max-width: 948px) {
+    .nav {
+        justify-content: space-between;
+    }
+    .nav ul, .searchBar, .profile {
+        display: none;
+    }
+   
+}
+@media screen and (max-width: 948px) {
+    .get_started {
+        display: none;
+    }
+    .menuBtn {
+        display: block;
+    }
+}
